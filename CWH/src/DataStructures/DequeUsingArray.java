@@ -23,6 +23,18 @@ public class DequeUsingArray
 		this.currentSize=0;
 	}
 	
+	// see front element
+	public int peek()
+	{
+		return arr[front];
+	}
+	
+	// see rear
+	public int peekRear()
+	{
+		return arr[rear];
+	}
+	
 	public void addFront(int data)
 	{
 		if(isFull())
