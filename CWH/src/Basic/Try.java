@@ -52,5 +52,8 @@ public class Try {
 		MyClass obj = new MyClass();
 		obj.fun();
 		System.out.println(fun(10));
+		
+		ArrayList<Integer> list  = new ArrayList<Integer>();
+		list.clear();
 	}
 }

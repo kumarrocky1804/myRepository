@@ -1,5 +1,8 @@
 package DataStructures;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree 
 {
 	private TreeNode root;
@@ -11,6 +14,11 @@ public class BinarySearchTree
 	public TreeNode getRoot()
 	{
 		return root;
+	}
+	
+	public void setRoot(TreeNode node)
+	{
+		root = node;
 	}
 	
 	public void insert(int data)
@@ -181,7 +189,7 @@ public class BinarySearchTree
 			return;
 		
 		TreeNode currNode = start;
-		System.out.println(start.getData());
+		System.out.print(start.getData() + " -> ");
 		this.preorderTraversal(currNode.getLeft());
 		this.preorderTraversal(currNode.getRight());
 	}
@@ -194,7 +202,60 @@ public class BinarySearchTree
 		TreeNode currNode = start;
 		this.postorderTraversal(currNode.getLeft());
 		this.postorderTraversal(currNode.getRight());
-		System.out.println(start.getData());
+		System.out.print(start.getData()+ " -> ");
+	}
+	
+	public void levelOrderTraversal(TreeNode start)
+	{
+		if(start==null)
+			return;
+		
+		TreeNode currNode = start;
+		Queue<TreeNode> q = new LinkedList<TreeNode>();
+		
+		q.add(currNode);
+		while(!q.isEmpty())
+		{
+			System.out.print(q.peek().getData() + " -> ");
+			
+			if(q.peek().getLeft() != null)
+				q.add(q.peek().getLeft());
+			if(q.peek().getRight()!=null)
+				q.add(q.peek().getRight());
+			
+			q.remove();
+		}
+	}
+	
+	public void leftView(TreeNode root)
+	{
+		// level order traversal and print first node from every level
+		if(root==null)
+			return;
+		
+		TreeNode currNode = root;
+		Queue<TreeNode> q = new LinkedList<TreeNode>();
+		
+		q.add(currNode);
+		while(!q.isEmpty())
+		{
+			// size of each level
+			int sizeOfQ = q.size();
+			for(int i=0; i<sizeOfQ; i++)
+			{
+				// if first of level print it
+				if(i==0)
+					System.out.print(q.peek().getData() + " -> ");
+				
+				// continue traversal
+				if(q.peek().getLeft() != null)
+					q.add(q.peek().getLeft());
+				if(q.peek().getRight()!=null)
+					q.add(q.peek().getRight());
+				//remove parent node after adding child nodes.
+				q.remove();
+			}
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -209,14 +270,28 @@ public class BinarySearchTree
 		tree.insert(80);
 		tree.insert(65);
 		
-		System.out.println();
+		/*System.out.println();
 		tree.inorderTraversal(tree.getRoot());
 		System.out.println();
 		tree.delete(tree.getRoot(),50);
 		tree.inorderTraversal(tree.getRoot());
 		System.out.println();
-		System.out.println(tree.getRoot().getData());
+		System.out.println(tree.getRoot().getData()); */
 		
+		System.out.println("InOrder Traversal - ");
+		tree.inorderTraversal(tree.getRoot());
+		System.out.println();
+		System.out.println("PreOrder Traversal - ");
+		tree.preorderTraversal(tree.getRoot());
+		System.out.println();
+		System.out.println("PostOrder Traversal");
+		tree.postorderTraversal(tree.getRoot());
+		System.out.println();
+		System.out.println("Level Order Traversal");
+		tree.levelOrderTraversal(tree.getRoot());
+		System.out.println();
+		System.out.println("Left View");
+		tree.leftView(tree.getRoot());
 	}
 }
 
