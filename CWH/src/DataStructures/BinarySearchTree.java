@@ -183,6 +183,28 @@ public class BinarySearchTree
 		this.inorderTraversal(currNode.getRight());
 	}
 	
+	//INORDER WITH RECURSION
+	public void inorderIterative(TreeNode start)
+	{		
+		java.util.Stack<TreeNode> stack = new java.util.Stack<TreeNode>();
+		
+		TreeNode currNode = start;
+		
+		while(currNode!=null || !stack.isEmpty())
+		{
+			while(currNode!=null)
+			{
+				stack.push(currNode);
+				currNode=currNode.getLeft();
+			}
+			
+			currNode = stack.pop();
+			System.out.print(currNode.getData() + " -> ");
+			currNode=currNode.getRight();
+		}
+		
+	}
+	
 	public void preorderTraversal(TreeNode start)
 	{
 		if(start == null)
@@ -192,6 +214,25 @@ public class BinarySearchTree
 		System.out.print(start.getData() + " -> ");
 		this.preorderTraversal(currNode.getLeft());
 		this.preorderTraversal(currNode.getRight());
+	}
+	
+	public void preorderIterative(TreeNode start)
+	{		
+		java.util.Stack<TreeNode> stack = new java.util.Stack<TreeNode>();
+		
+		TreeNode currNode = start;
+		stack.push(currNode);
+		
+		while(!stack.isEmpty())
+		{
+			currNode = stack.pop();
+			System.out.print(currNode.getData() + " -> ");
+			if(currNode.getRight()!=null)
+				stack.push(currNode.getRight());
+			if(currNode.getLeft()!=null)
+				stack.push(currNode.getLeft());
+		}
+		
 	}
 	
 	public void postorderTraversal(TreeNode start)
@@ -204,6 +245,29 @@ public class BinarySearchTree
 		this.postorderTraversal(currNode.getRight());
 		System.out.print(start.getData()+ " -> ");
 	}
+	
+	public void postorderIterative(TreeNode root)
+	{
+        java.util.Stack<TreeNode> stack1 = new java.util.Stack<TreeNode>();
+        java.util.Stack<TreeNode> stack2 = new java.util.Stack<TreeNode>();
+        TreeNode currNode=root;
+        stack1.push(root);
+		
+		while(!stack1.isEmpty())
+		{
+			currNode = stack1.pop();
+			
+			stack2.push(currNode);
+			
+			if(currNode.getLeft()!=null)
+			    stack1.push(currNode.getLeft());
+		    if(currNode.getRight()!=null)
+		        stack1.push(currNode.getRight());
+		}
+		
+		while(!stack2.isEmpty())
+		    System.out.print(stack2.pop().getData() + " -> ");
+    }
 	
 	public void levelOrderTraversal(TreeNode start)
 	{
@@ -281,11 +345,20 @@ public class BinarySearchTree
 		System.out.println("InOrder Traversal - ");
 		tree.inorderTraversal(tree.getRoot());
 		System.out.println();
+		System.out.println("Inorder Traversal iterative - ");
+		tree.inorderIterative(tree.getRoot());
+		System.out.println();
 		System.out.println("PreOrder Traversal - ");
 		tree.preorderTraversal(tree.getRoot());
 		System.out.println();
+		System.out.println("PreOrder Traversal Iterative - ");
+		tree.preorderIterative(tree.getRoot());
+		System.out.println();
 		System.out.println("PostOrder Traversal");
 		tree.postorderTraversal(tree.getRoot());
+		System.out.println();
+		System.out.println("PostOrder Traversal Iterative - ");
+		tree.postorderIterative(tree.getRoot());
 		System.out.println();
 		System.out.println("Level Order Traversal");
 		tree.levelOrderTraversal(tree.getRoot());

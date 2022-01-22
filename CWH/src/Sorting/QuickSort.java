@@ -49,7 +49,7 @@ public class QuickSort
 		return indexPivot;
 	}
 	
-	static void sort(int[] arr, int low, int high)
+	public static void sort(int[] arr, int low, int high)
 	{
 		if(low<high)
 		{
@@ -62,7 +62,7 @@ public class QuickSort
 		}
 	}
 	
-	static void display(int[] arr)
+	public static void display(int[] arr)
 	{
 		System.out.println();
 		for(int i=0; i<arr.length; i++)
