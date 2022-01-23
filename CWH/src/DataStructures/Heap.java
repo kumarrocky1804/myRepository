@@ -2,7 +2,7 @@ package DataStructures;
 
 public class Heap 
 {
-	/* Heap is a special case for Balance binary tree.
+	/* Heap is a special case for complete binary tree.
 	 * Here we implemented min heap using arrays.
 	 * min heap means that the parent node will always have data <= child nodes
 	 *  - it can be used to sort data in non increasing order (Heap sort)

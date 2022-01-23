@@ -55,5 +55,8 @@ public class Try {
 		
 		ArrayList<Integer> list  = new ArrayList<Integer>();
 		list.clear();
+		
+		String s="A";
+		System.out.println("A" + (char)66 + Integer.toString(66));
 	}
 }
