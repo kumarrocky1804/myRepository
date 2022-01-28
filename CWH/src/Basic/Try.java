@@ -1,6 +1,7 @@
 package Basic;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 interface FirstInterface
 {
@@ -50,13 +51,16 @@ public class Try {
 	public static void main(String[] args) {
 
 		MyClass obj = new MyClass();
-		obj.fun();
-		System.out.println(fun(10));
+		//obj.fun();
+		//System.out.println(fun(10));
 		
-		ArrayList<Integer> list  = new ArrayList<Integer>();
-		list.clear();
+		ArrayList<Integer> list  = new ArrayList<Integer>(6);
+		//System.out.println(list.size());
 		
-		String s="A";
-		System.out.println("A" + (char)66 + Integer.toString(66));
+		String s="Geeks";
+		System.out.println(""+s.charAt(s.length()-1));
+		
+		PriorityQueue<Integer> q = new PriorityQueue<Integer>();
+		q.add(1);
 	}
 }
