@@ -45,7 +45,12 @@ interface BasicHuman
 
 class Human extends Monkey implements BasicHuman
 {
-
+	@Override
+	public void jump()
+	{
+		super.jump();
+		System.out.println("Now jump as human");
+	}
 	@Override
 	public void eat() {
 		System.out.println("Human eats");
