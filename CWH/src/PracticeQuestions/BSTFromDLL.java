@@ -8,9 +8,10 @@ import DataStructures.DoublyLinkedList;
 import DataStructures.DoublyNode;
 import DataStructures.TreeNode;
 
+/** The problem is to create a balanced BST from a sorted Doubly Linked List */
+
 public class BSTFromDLL 
 {
-	/* The problem is to create a balanced BST from a sorted Doubly Linked List */
 	public static TreeNode DLLToBST(DoublyNode head)
 	{
 		DoublyNode currNode = head;

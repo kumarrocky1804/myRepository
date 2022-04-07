@@ -3,10 +3,11 @@ package PracticeQuestions;
 import DataStructures.BinarySearchTree;
 import DataStructures.TreeNode;
 
+/** The problem is to print the nodes at k distance from the root.
+ */
+
 public class PrintNodeAtkDistance 
 {
-	/* The problem is to print the nodes at k distance from the root.
-	 */
 	
 	// The problem can also be done by level order traversal but I chose this to practice.
 	public void printNodes(TreeNode root, int k)

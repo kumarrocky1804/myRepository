@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/* This program will demonstrate the thread pool/ executor service working
+/** This program will demonstrate the thread pool/ executor service working
  * A pool of 3 threads will be created to handle 5 threads of 2 different tasks.
  */
 

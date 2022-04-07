@@ -3,20 +3,20 @@ package PracticeQuestions;
 import DataStructures.BinarySearchTree;
 import DataStructures.TreeNode;
 
+/** The problem is that any two nodes in the BST has got swapped. We have to correct that
+ * The simple method is to inorder traverse -> sort -> insert back to get tree (O(nlogn))
+ * 
+ * Another method is to use the same approach as sorting a array with swapped values.
+ * For more info - https://www.geeksforgeeks.org/fix-two-swapped-nodes-of-bst/
+ * 
+ * In inorder traversal, there can be two cases -
+ * 1. If adjacent nodes are swapped, then there is one irregularity (only one instance where
+ *    current node is less than prev.
+ * 2. If any other nodes are swapped, then there are two such irregularities
+ */
+
 public class CorrectBST 
-{
-	/* The problem is that any two nodes in the BST has got swapped. We have to correct that
-	 * The simple method is to inorder traverse -> sort -> insert back to get tree (O(nlogn))
-	 * 
-	 * Another method is to use the same approach as sorting a array with swapped values.
-	 * For more info - https://www.geeksforgeeks.org/fix-two-swapped-nodes-of-bst/
-	 * 
-	 * In inorder traversal, there can be two cases -
-	 * 1. If adjacent nodes are swapped, then there is one irregularity (only one instance where
-	 *    current node is less than prev.
-	 * 2. If any other nodes are swapped, then there are two such irregularities
-	 */
-	
+{	
 	static TreeNode prev,first,mid,last;
 	public static void inorderAndFindIrregularity(TreeNode root)
 	{

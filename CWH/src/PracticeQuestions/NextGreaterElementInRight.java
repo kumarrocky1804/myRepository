@@ -2,12 +2,13 @@ package PracticeQuestions;
 
 import java.util.Stack;
 
+/** Problem is to print next greater element than the current element 
+ * - We are going to use stack
+ */
+
+
 public class NextGreaterElementInRight 
 {
-	/* Problem is to print next greater element than the current element 
-	 * - We are going to use stack
-	 */
-	
 	// Simple solution without stack
 	public static long[] nextLargerElement2(long[] arr)
 	{
@@ -82,7 +83,7 @@ public class NextGreaterElementInRight
 	}
 	
 	public static void main(String[] args) {
-		long[] arr = {4,5,2,25};
+		long[] arr = {4,5,35,25};
 		//long[] arr = {13,7,6,12};
 		//long[] arr = {13,12,11,10,9,2,1};
 		//arr = nextLargerElement(arr);

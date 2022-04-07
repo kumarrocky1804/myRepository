@@ -85,8 +85,7 @@ public class Try {
 		System.out.println(sc.nextInt());
 		System.out.println("kdejk");
 		System.out.println(sc.nextLine());*/
-		String pass = System.console().readLine(); // Does not work on IDE 	
-		System.out.println(pass);
-		
+		//String pass = System.console().readLine(); // Does not work on IDE 	
+		//System.out.println(pass);
 	}
 }

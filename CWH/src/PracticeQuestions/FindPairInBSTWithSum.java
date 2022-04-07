@@ -5,22 +5,22 @@ import java.util.Stack;
 import DataStructures.BinarySearchTree;
 import DataStructures.TreeNode;
 
+/** The problem is to find the pair in BST that has the sum equal to a certain number.
+ * Simple Method is-
+ * 	1. Store Inorder in an array. (Array will be sorted)
+ *  2. Start with left and right simultaneously as left will be smallest and right will 
+ *     be highest.
+ *  3. if sum ==k, great we are done; id sum<k, we need higher number, left++;
+ *     if sum>k, we need lower number, right--
+ *  In above algo, we need O(n) space, O(n) time.
+ *  
+ *  Better Method is -
+ *  Inorder and reverse inorder simultaneously and step by step take out the numbers similar
+ *  to above algo.
+ */
+
 public class FindPairInBSTWithSum
-{
-	/* The problem is to find the pair in BST that has the sum equal to a certain number.
-	 * Simple Method is-
-	 * 	1. Store Inorder in an array. (Array will be sorted)
-	 *  2. Start with left and right simultaneously as left will be smallest and right will 
-	 *     be highest.
-	 *  3. if sum ==k, great we are done; id sum<k, we need higher number, left++;
-	 *     if sum>k, we need lower number, right--
-	 *  In above algo, we need O(n) space, O(n) time.
-	 *  
-	 *  Better Method is -
-	 *  Inorder and reverse inorder simultaneously and step by step take out the numbers similar
-	 *  to above algo.
-	 */
-	
+{	
 	public static void FindPair(TreeNode root, int sum)
 	{
 		// flags to check if one item from inorder and reverse inorder is taken out

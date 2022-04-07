@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/* Stream API Demo - 
+/** Stream API Demo - 
  * Intermediate methods - map(), filter(), sorted().
  * Terminal Methods - collect(), reduce(), forEach().
  * 

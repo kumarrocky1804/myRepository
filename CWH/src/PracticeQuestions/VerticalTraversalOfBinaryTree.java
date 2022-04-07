@@ -7,12 +7,12 @@ import java.util.Vector;
 import DataStructures.BinarySearchTree;
 import DataStructures.TreeNode;
 
+/** For more info on vertical traversal - 
+ * https://www.geeksforgeeks.org/print-binary-tree-vertical-order-set-2/
+ */
+
 public class VerticalTraversalOfBinaryTree 
-{
-	/* For more info on vertical traversal - 
-	 * https://www.geeksforgeeks.org/print-binary-tree-vertical-order-set-2/
-	 */
-	
+{	
 	public static void getVerticalOrder(TreeNode root, int hd, TreeMap<Integer,Vector<Integer>> map)
 	{
 		if(root==null)

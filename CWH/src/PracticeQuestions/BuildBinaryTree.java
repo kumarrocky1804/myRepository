@@ -2,6 +2,10 @@ package PracticeQuestions;
 
 import java.util.HashMap;
 
+/** The problem is to build the binary tree from given inorder and preorder traversal
+ * results.
+ */
+
 class Node
 {
 	int data;
@@ -15,11 +19,7 @@ class Node
 }
 
 public class BuildBinaryTree 
-{
-	/* The problem is to build the binary tree from given inorder and preorder traversal
-	 * results.
-	 */
-	
+{	
 	static int preIndex=0;
 	
 	static HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();

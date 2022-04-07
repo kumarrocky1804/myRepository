@@ -2,16 +2,16 @@ package SpecialQuestions;
 
 import java.util.Stack;
 
+/** Given an array of prices of stock on a given day price[i].
+ * span[i] should be the number of consecutive days before iTH day when price was lower
+ * or equal to price[i].
+ * Example - price[i] - {100,80,60,70,60,75,85}
+ * 			 span[i]  - {1,1,1,2,1,4,6}
+ */
+
 public class StockSpanProblem 
-{
-	/* Given an array of prices of stock on a given day price[i].
-	 * span[i] should be the number of consecutive days before iTH day when price was lower
-	 * or equal to price[i].
-	 * Example - price[i] - {100,80,60,70,60,75,85}
-	 * 			 span[i]  - {1,1,1,2,1,4,6}
-	 */
-	
-	/* A simple approach is to go to every element of array in two loops and check for prices
+{	
+	/** A simple approach is to go to every element of array in two loops and check for prices
 	 * complexity - O(n^2)
 	 * Another efficient way is to use stacks to store the index of day in stack.
 	 * TO reduce the complexity we will keep delete the days on which the price was lower than

@@ -4,19 +4,19 @@ import DataStructures.BinarySearchTree;
 import DataStructures.TreeNode;
 import Sorting.QuickSort;
 
+/** The problem is to convert a binary tree to BST keeping its original structure.
+ * i.e. each node in the BST should also have the same number of children as original binary tree
+ * but their data can be swapped :P
+ */
+
+/** steps involved are -
+ *  1. Inorder the tree and put them in an array.
+ *  2. Sort the array
+ *  3. Inorder the tree again and keep replacing the nodes with array elements.
+ */
+
 public class BinaryTreeToBST 
-{
-	/* The problem is to convert a binary tree to BST keeping its original structure.
-	 * i.e. each node in the BST should also have the same number of children as original binary tree
-	 * but their data can be swapped :P
-	 */
-	
-	/* steps involved are -
-	 *  1. Inorder the tree and put them in an array.
-	 *  2. Sort the array
-	 *  3. Inorder the tree again and keep replacing the nodes with array elements.
-	 */
-	
+{	
 	static int index;
 	
 	public static void inorderAndStore(TreeNode root, int[] arr)

@@ -2,21 +2,21 @@ package PracticeQuestions;
 
 import java.util.HashMap;
 
+/** The problem is to check whether the subarray exists with sum = 0
+ * Example -1 [1,-1,2,-1,1,3] - YES
+ * Example -2 [1,2,3,-5,3,4] - Yes (2,3,-5)
+ */
+
+/** The implemented solution is to create a array with sum until that element
+ * For example - 1 [1,0,2,1,2,5]
+ * example -2 [1,3,6,1,4,8]
+ * 
+ * Observation is that if the elements in this array repeats or it is 0,
+ * then the subarray exists with sum = 0;
+ */
+
 public class IfArrayHasSubArrayWithSum0 
-{
-	/* The problem is to check whether the subarray exists with sum = 0
-	 * Example -1 [1,-1,2,-1,1,3] - YES
-	 * Example -2 [1,2,3,-5,3,4] - Yes (2,3,-5)
-	 */
-	
-	/* The implemented solution is to create a array with sum until that element
-	 * For example - 1 [1,0,2,1,2,5]
-	 * example -2 [1,3,6,1,4,8]
-	 * 
-	 * Observation is that if the elements in this array repeats or it is 0,
-	 * then the subarray exists with sum = 0;
-	 */
-	
+{	
 	static boolean checkSubArray(int[] arr)
 	{
 		// we are using hashmap due to its O(1) complexity to search elements

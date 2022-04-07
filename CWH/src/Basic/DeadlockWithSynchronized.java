@@ -1,6 +1,6 @@
 package Basic;
-//Java program to illustrate Deadlock
-//in multithreading.
+/** Java program to illustrate Deadlock
+in multithreading. */
 
 //This class is shared by both threads
 class Shared

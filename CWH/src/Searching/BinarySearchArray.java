@@ -1,12 +1,13 @@
 package Searching;
 
+/** Linear search has linear complexity
+ * Binary search has complexity - O(log n)
+ * Condition for this logic to work is
+ * the array should be sorted in increasing order
+ */
+
 public class BinarySearchArray 
 {
-	/* Linear search has linear complexity
-	 * Binary search has complexity - O(log n)
-	 * Condition for this logic to work is
-	 * the array should be sorted in increasing order
-	 */
 	static int BinarySearch(int[] arr,int ele)
 	{
 		int lowIndex = 0;

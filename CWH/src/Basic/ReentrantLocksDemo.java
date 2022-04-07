@@ -3,7 +3,7 @@ package Basic;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/* The disadvantage of synchronized is that we can acquire class level or object level locks
+/** The disadvantage of synchronized is that we can acquire class level or object level locks
  * and cannot have 2 or more locks for different methods. We can do the same with Locks framework
  * since java 1.5
  * 
