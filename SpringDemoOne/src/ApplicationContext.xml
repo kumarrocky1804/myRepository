@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <!-- Loading values from properties file -->
+  <context:property-placeholder location="classpath:sport.properties"/>
+  
+  <bean id="myFortune" class="com.springDemoOne.GoodFortune"/>
+  
+  <!-- Constructor depedency Injection -->
+  <bean id="myCoach" class="com.springDemoOne.BaseBallCoach">
+  	<constructor-arg ref="myFortune"/>
+  </bean>
+  
+  <!-- Setter dependency injection -->
+  <bean id="myCricketCoach" class="com.springDemoOne.CricketCoach">
+
+  	<!-- Spring will prefix property name with set and make it setFortuneService() -->
+  	<property name="fortuneService" ref="myFortune"></property>
+  	
+  	<!-- Can Inject literal values as well as objects -->
+  	<!-- <property name="team" value="CSK"/>  -->
+  	<!-- <property name="email" value="email@gmail.com"/> -->
+  	
+  	<!--  We can also use properties file for literal values -->
+  	<property name="team" value="${foo.team}"/>
+  	<property name="email" value="${foo.email}"/>
+  </bean>
+
+</beans>
