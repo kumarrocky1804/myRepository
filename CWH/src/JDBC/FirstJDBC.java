@@ -9,7 +9,7 @@ public class FirstJDBC
 		try {
 			// it is deprecated
 			//Class.forName("com.mysql.jdbc.Driver");
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			//Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			String url = "jdbc:mysql://localhost:3306/test";
 			String user = "root";
