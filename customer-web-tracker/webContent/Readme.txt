@@ -5,4 +5,3 @@ MySQL JDBC Connector JAR
 JSTL JARs
 Hibernate Required JARs - 5.2.18
 Hibernate Optional JARs - C3PO
-AspectJ jar file
