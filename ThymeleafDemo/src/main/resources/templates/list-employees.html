@@ -1,0 +1,36 @@
+<!Doctype HTML>
+<html xlmns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Employees</title>
+		
+		<!-- reference remote CDN CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" />
+	</head>
+	
+	<body>
+		<h2>EMPLOYEE DIRECTORY</h2>
+		<hr>
+		<div class="container">
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>ID</th>
+					<th>FirstName</th>
+					<th>LastName</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="employee : ${employees}">
+					<td th:text="${employee.id}"/>
+					<td th:text="${employee.firstName}"/>
+					<td th:text="${employee.lastName}"/>
+					<td th:text="${employee.email}"/>
+				</tr>
+			</tbody>
+		</table>	
+		</div>
+	</body>
+
+</html>
