@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.StructuralDesignPattern;
 /* Used to decouple the abstraction and implementation
  * Link - https://www.geeksforgeeks.org/bridge-design-pattern/
  * 

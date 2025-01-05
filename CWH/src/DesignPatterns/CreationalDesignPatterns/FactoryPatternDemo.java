@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.CreationalDesignPatterns;
 /* we will create a service that can notify the user via sms, email and push
  * Using Factory Pattern
  * This pattern can be used when loose coupling is needed for new object creation of similar
@@ -64,3 +64,9 @@ public class FactoryPatternDemo
 		notification.notifyUser();
 	}
 }
+
+/*
+ * Disadvantage is that if I want to create new type of notification, I will need to modify NotificationFactory
+ * class, which does not follow Open/closed principle from SOLID
+ * For better approach- FactoryPatternDemoV2
+ * */

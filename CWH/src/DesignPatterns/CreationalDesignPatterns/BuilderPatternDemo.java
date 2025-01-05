@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.CreationalDesignPatterns;
 /* used to reduce the number of parameters and improve code design and readablity while creating
  * complex objects. It can also be used where the order of creating components is important
  * 

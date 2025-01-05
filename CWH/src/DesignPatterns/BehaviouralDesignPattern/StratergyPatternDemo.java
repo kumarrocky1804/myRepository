@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.BehaviouralDesignPattern;
 /* Also called Policy pattern - 
  * In computer programming, the strategy pattern (also known as the policy pattern) is a 
  * software design pattern that enables an algorithm’s behavior to be selected at runtime.

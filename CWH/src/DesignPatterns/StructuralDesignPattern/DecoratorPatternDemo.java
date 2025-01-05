@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.StructuralDesignPattern;
 
 /* This pattern is used when we want to enhance the selected object's functionality or 
  * enhance the object without changing its behavior

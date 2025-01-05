@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.BehaviouralDesignPattern;
 /* This pattern is used when a lot of objects are dependent upon one object's state. For ex.-
  * Cricbuzz has to update everything when cricketData is updated.
  * 

@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.BehaviouralDesignPattern;
 
 /* Used popularly for framework development. Used to expose the skeleton of algorithm to 
  * the subclasses and let them define the partial functionalities but preserve the algorithm

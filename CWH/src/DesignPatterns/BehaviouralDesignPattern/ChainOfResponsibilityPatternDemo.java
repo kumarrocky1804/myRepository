@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.BehaviouralDesignPattern;
 /* Used to provide loose coupling in the design where the same type of request can be handled 
  * by multiple handlers.
  * 
@@ -6,6 +6,10 @@ package DesignPatterns;
  * Link - https://www.geeksforgeeks.org/chain-responsibility-design-pattern/
  * 
  * Behavioral Design Pattern
+ * 
+ * Use When -
+ * Use them when your objects need to communicate in complicated ways.
+ * Choose them when you want to easily change how things behave while the program is running.
  */
 
 class Number

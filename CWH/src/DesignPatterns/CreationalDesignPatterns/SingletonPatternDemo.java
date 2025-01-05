@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.CreationalDesignPatterns;
 
 /* This pattern ensures that there is only one instance of the class and no other class
  * can create multiple instances of this.

@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.StructuralDesignPattern;
 /* Proxy Pattern is used as a wrappper to cover the main object's complexities
  * Link - https://www.geeksforgeeks.org/proxy-design-pattern/
  * 

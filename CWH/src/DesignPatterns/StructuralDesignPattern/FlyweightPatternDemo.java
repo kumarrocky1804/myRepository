@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.StructuralDesignPattern;
 
 import java.util.HashMap;
 import java.util.Random;
