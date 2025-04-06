@@ -6,15 +6,17 @@ import javax.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 // explicit bean ID
 //@Component("sillyCoach")
 //default beanID
 @Component
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 	// field DI
-	/*@Autowired
+	/*@Autowired // this will work without Qualifier if only one fortureService is there, check by commenting @component on one of them
 	@Qualifier("hardFortune")*/
 	private FortuneService fortune;
 	// Sprint will access the above field with help of Reflection API

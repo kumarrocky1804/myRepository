@@ -3,10 +3,12 @@ package com.springDemoOne;
 public class BaseBallCoach implements Coach {
 	
 	private FortuneService theFortune;
+	private String name;
 	
-	public BaseBallCoach(FortuneService theFortune) {
+	public BaseBallCoach(FortuneService theFortune, String name) {
 		super();
 		this.theFortune = theFortune;
+		this.name = name;
 	}
 
 	@Override
@@ -18,6 +20,10 @@ public class BaseBallCoach implements Coach {
 	@Override
 	public String getFortune() {
 		return theFortune.getFortuneMessage();
+	}
+	
+	public String getName() {
+		return this.name;
 	}
 	
 	public String extraMethod()

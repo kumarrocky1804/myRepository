@@ -11,8 +11,9 @@
   
   <!-- Constructor depedency Injection -->
   <bean id="myCoach" class="com.springDemoOne.BaseBallCoach" 
-  	init-method="startup" destroy-method="cleanup">
+  	init-method="startup" destroy-method="cleanup" scope="prototype"> <!-- default scope is singleton -->
   	<constructor-arg ref="myFortune"/>
+  	<constructor-arg value="Kabir Khan"/>
   </bean>
 
 </beans>

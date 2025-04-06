@@ -15,6 +15,11 @@ public class SportConfig
 	 * following
 	 */
 	
+	/*
+	 * this annotation is most useful in cases of third party apps where you cannot edit code to add @Component
+	 * You can create a wrapper function to return the instance of that third party app and use this @Bean
+	 * to create bean for that app.
+	 */
 	@Bean
 	public FortuneService goodFortune()
 	{

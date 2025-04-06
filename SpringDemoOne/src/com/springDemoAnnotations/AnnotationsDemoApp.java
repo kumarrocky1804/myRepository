@@ -14,8 +14,11 @@ public class AnnotationsDemoApp {
 		// default bean ID
 		Coach coach = context.getBean("tennisCoach", Coach.class);
 		
+		Coach coach2 = context.getBean("tennisCoach", Coach.class);
+		
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getFortune());
+		System.out.println(coach == coach2);
 		
 		/*TennisCoach coach = context.getBean("tennisCoach", TennisCoach.class);
 		System.out.println(coach.getDailyWorkout());
