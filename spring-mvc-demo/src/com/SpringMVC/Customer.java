@@ -27,6 +27,7 @@ public class Customer
 	// if we dont pass anything default value and message will be used
 	// Useful when you have the same kind of constraint but value is different
 	// for different clients
+	//@CourseCode("DD")
 	@CourseCode
 	private String courseCode;
 		
