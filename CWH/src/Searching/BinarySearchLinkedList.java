@@ -8,10 +8,16 @@ public class BinarySearchLinkedList
 	static Node BinarySearch(Node start, int ele)
 	{
 		Node last = null;
+		Node temp = start;
+		while(temp.getNext() != null)
+			temp = temp.getNext();
+		
+		last = temp;
 		Node mid = null;
 		do
 		{
-			mid = returnMid(start,last);
+			//mid = returnMid(start,last);
+			mid = returnMid2(start, last);
 			
 			System.out.println("CURRENT Start is  - " + start.getData());
 			System.out.println("CUrrent Mid is - " + mid.getData());
@@ -77,7 +83,7 @@ public class BinarySearchLinkedList
 	}
 	
 	//IF LAST IS NULL, THE FUNCTION WILL FIND MID OF FULL LIST
-	static Node returnMid(Node start)
+	static Node returnMid2(Node start,Node last)
 	{
 		Node slow,fast;
 		if(start == null)
@@ -96,10 +102,10 @@ public class BinarySearchLinkedList
 			 * THIS WILL RETURN THE MID ELEMENT FOR ODD NUMBER OF ELEMENTS AND 
 			 * THE UPPER MID FOR EVEN NUMBER OF ELEMENTS
 			 */
-			while(fast != null)
+			while(fast != last)
 			{
 				fast = fast.getNext();
-				if(fast == null)
+				if(fast == last)
 				{
 					return slow.getNext();
 				}
@@ -131,10 +137,10 @@ public class BinarySearchLinkedList
 		System.out.println();
 		//System.out.println(BinarySearchLinkedList.returnMid(list.getHead(),null).getData());
 		
-		System.out.println(BinarySearchLinkedList.returnMid(list.getHead()).getData());
+		System.out.println(BinarySearchLinkedList.returnMid2(list.getHead(),null).getData());
 		
-		/*Node node;
-		node = BinarySearch(list.getHead(),45);
+		Node node;
+		node = BinarySearch(list.getHead(),10);
 		if(node == null)
 		{
 			System.out.println("ELEMENT NOT FOUND");
@@ -142,6 +148,6 @@ public class BinarySearchLinkedList
 		else
 		{
 			System.out.println("ELEMENT FOUND");
-		}*/
+		}
 	}
 }
